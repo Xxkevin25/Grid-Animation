@@ -1,0 +1,219 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: #d8709383;
+}
+
+/* animation#1 */
+.head {
+    display: flex;
+    justify-content: center;
+    animation: backInDown 2s; 
+}
+
+/* animation#2 */
+h1{
+    animation: bounce 3s ease infinite;
+}
+
+/* animation#3 */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "logo logo logo"
+        "caja caja izq"
+        "caja caja izq"
+        "bot bot bot"
+        "foo foo foo";
+    grid-gap: 20px;
+    animation: backInUp 2s;
+}
+
+/* animation# */
+div .caja{
+    animation: main 1.5s ease-in-out alternate infinite;
+}
+
+/* animation#4 */
+.logo {
+    background: #fa80724d;
+    grid-area: logo;
+    border: 2px solid #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    animation: bcolor 3s ease-in-out alternate infinite;
+}
+
+/* animation# */
+.contenedor-cajas {
+    background: #f4a5604b;
+    grid-area: caja;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    animation: main 2s ease-in-out alternate infinite;
+}
+
+.caja {
+    background: #ffebcd44;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* animation#5 */
+h3{
+    animation: tada 2s infinite;
+}
+
+/* animation# */
+p{
+    animation: Tcolor 3s ease-in-out alternate infinite;
+}
+
+/* animation# */
+.cont-left {
+    background: #00d9ff2f;
+    grid-area: izq;
+    border: 2px solid #ffffff;
+    padding: 150px 0px 0px 0px;
+    text-align: center;
+    border-radius: 10px;
+    animation: main 2s ease-in-out alternate infinite;
+}
+
+.cont-button {
+    display: flex;
+    grid-area: bot;
+    justify-content: space-between;
+}
+
+/* animation#6 */
+.cont-button button {
+    height: 115px;
+    width: 100px;
+    background: #892be262;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    animation: color 3s ease-in-out alternate infinite;
+}
+
+/* animation#7 */
+.cont-button button:hover {
+    background: #ff000062;
+    border-color: #000000;
+    color: #ffffff;
+    animation: move 3s ease alternate infinite;
+}
+
+footer {
+    background: #00ffff31;
+    grid-area: foo;
+    border: 2px solid #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    animation: main 2s ease-in-out alternate infinite;
+}
+
+@keyframes main {
+    0%{}
+    100%{
+        box-shadow: 0px 0px 0px 5px white;
+    }
+}
+
+@keyframes Tcolor {
+    0% {
+        color: #ff7300;
+        text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em white;    }
+    25% {
+        color: rgb(255, 0, 0);
+    }
+    50% {
+        color: rgb(192, 115, 0);
+        text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em white;    }
+    75% {
+        color: rgb(255, 0, 98);
+    }
+    100% {
+        color: rgb(104, 42, 0);
+        text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em white;    }
+}
+
+@keyframes bcolor {
+    0% {
+        background: #f35240f8;;
+    }
+    25% {
+        background: rgba(255, 102, 0, 0.486);
+        box-shadow: 0px 0px 0px 7px white;
+    }
+    50% {
+        background: rgba(255, 0, 64, 0.514);
+    }
+    75% {
+        background: rgba(255, 0, 85, 0.404);
+    }
+    100% {
+        transform: scaleX(.9);
+    }
+}
+
+@keyframes color {
+    0% {}
+    50% {
+        background: rgb(255, 0, 119);
+    }
+    100% {
+        background: lightcoral;
+    }
+}
+
+@keyframes move {
+    0% {
+        background:rgb(209, 6, 6);
+        transform: rotate(0deg);
+    }
+
+    25%{
+        background: rgb(243, 93, 33);
+        transform: rotate(30deg);
+    }
+    50% {
+        background: rgb(243, 93, 33);
+        transform: rotate(0deg);
+    }
+    75%{
+        background: rgb(243, 93, 33);
+        transform: rotate(-30deg);
+    }
+    100% {
+        background: rgb(247, 147, 18);
+        transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-width:514px) and (min-width:320px) {
+    main {
+        display: grid;
+        grid-template-areas: "logo logo logo"
+            "caja caja caja"
+            "izq izq izq"
+            "bot bot bot"
+            "foo foo foo";
+        grid-gap: 20px;
+    }
+
+    .cont-left {
+        padding: 0;
+    }
+
+    .cont-button button {
+        height: 75px;
+        width: 58px;
+
+    }
+
+}
